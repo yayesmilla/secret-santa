@@ -35,7 +35,7 @@ $secretSanta.init = function () {
             giftee = $participants.getRange('A' + giftees[index]).getValue();
             gift = $wishlist.getRange('A' + gifts[index]).getValue();
 
-            if (gifter === giftee) {
+            if (gifter.name === giftee) {
                 // restart the drawlots, we can't have the same gifter and giftee
                 $this.startDrawLots();
                 return;
